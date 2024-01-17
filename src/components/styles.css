@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -15,7 +15,8 @@ h1 {
 .error-message {
   color: red;
   font-weight: bold;
-  margin-top: 10px; /* Add spacing between the error message and the shopping cart */
+  margin-top: 10px; 
+  /* Add spacing between the error message and the shopping cart */
 }
 
 .container {
@@ -24,26 +25,71 @@ h1 {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
 }
 
 .product {
-  margin-bottom: 20px;
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Remove any extra space below the image */
-  margin: 0 auto;
+  height: auto; 
+  /* Maintain the aspect ratio */
+  display: block;
+   /* Remove any extra space below the image */
+  margin: 25px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+  margin-left: 50px;
 }
+
+.product:hover {
+  transform: scale(1.1);
+  /* Increase the size on hover*/
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333
+  margin-bottom: 8px;
+
+  /* Center text horizontally and vertically*/
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  /* Set a maximum width and allow the text to wrap uniformly */
+  max-width: 200px;
+  /*Adjust based on your design*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: before nowrap;
+}
+
+/* Optional: Add some additional styling*/
+.product-title:hiver{
+  color: #0072ce;
+} 
 
 .product-carousel {
   display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  gap: 20px; /* Adjust the gap between products */
+  flex:wrap: wrap;
+  justify-content: flex-start;
+  gap: 50px;
+   /* Adjust the gap between products */
+   min-height: 50vh;
 }
 
 .product img {
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 200px; /* Center the image horizontally */
+  width: 150px; 
+  /* Set your desired width */
+  height: 200px; 
+  /* Set your desired height */
+  object-fit: cover;
+  border-radius: 50%;
+  /* Optional: Make the image circular */
 }
+
 
 h2 {
   color: #555;
@@ -62,13 +108,6 @@ li {
   margin-bottom: 10px;
 }
 
-button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  cursor: pointer;
-}
 
 button:hover {
   background-color: #2980b9;
@@ -79,14 +118,18 @@ button:hover {
 /* Default styles for cart item */
 .cart-item {
   display: flex;
-  align-items: center; /* Align items vertically */
-  margin-bottom: 20px;
+  margin-top:auto;
+  align-items: center; 
+  /* Align items vertically */
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 /* Image styles */
 .cart-item img {
-  max-width: 100px; /* Adjust the image size */
+  max-width: 200px; 
+  /* Adjust the image size */
   margin-right: 20px;
 }
 
@@ -97,22 +140,27 @@ button:hover {
 
 /* Styles for the count */
 .cart-item .count {
-  margin-right: 10px; /* Add space between count and product details */
+  margin-right: 10px; 
+  /* Add space between count and product details */
 }
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+
   /* Adjust layout for smaller screens */
   .cart-item {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
+    /* Stack items vertically */
   }
 
   .cart-item img {
     margin-right: 0;
     margin-bottom: 10px;
-    max-width: 100%; /* Adjust image width for smaller screens */
+    max-width: 100%; 
+    /* Adjust image width for smaller screens */
   }
 }
+
 /* styles.css (or your styled component styles) */
 
 /* Styles for the remove button */
@@ -123,6 +171,7 @@ button:hover {
   border: none;
   cursor: pointer;
   margin-top: 10px;
+  margin-left: auto;
 }
 
 /* Additional styles for the cart items */
@@ -131,11 +180,162 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.cart-item img {
-  max-width: 100px;
-  margin-right: 20px;
-}
-
 .cart-item .details {
   flex: 1;
 }
+
+/*Header.css*/
+
+.header-container { 
+  background-color: #0071dc;
+  padding: 10px; 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-line {
+  height: 1px; 
+  width: 100%;
+  background-color: #f6f8f8;
+  position: absolute;
+  top: 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  margin-right: 200px
+}
+
+.nav-1ist li {
+  margin-right: 10px;
+  /* Adjust the margin to create space between list items */
+  display: inline-block;
+}
+
+.nav-1ist li:hover {
+  transform: scale(1.1);
+  /* Increase the size on hover */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-image {
+  width: 150px;
+  height: auto;
+}
+
+/* Footer.css */
+
+.footer-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  color: #333;
+  position: relative; 
+  margin-top: 250px;
+}
+
+.footer-line {
+  height: 1px; 
+  width: 100%;
+  background-color:#000;
+  top: 0;
+}
+
+.footer-content {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1; 
+  margin-right: 20px;
+}
+
+.social-icons a {
+  color: #0073e7; 
+  margin-right: 10px;
+}
+
+.social-icons i {
+  font-size: 24px;
+}
+
+.cart-icon {
+  display: flex; 
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+  Font-size: 16px; 
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+input:focus, 
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0072ce;
+}
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #0071dc;
+    color: #fff;
+    border: none, 
+    border-radius: 8px;
+    /* Adjust the value to control the amount of curve */ 
+    cursor: pointer;
+  }
+
+  .add-to-cart-button{
+    position: inherit;
+    width: 150px;
+    /* Set your desired fixed width */ 
+    padding: 10px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    background-color: #ffff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .add-to-cart-button:hover {
+    transition: color .15s ease-in
+  }
+
+  .price-tag{
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    /* Adjust margin to create space between price and button*/
+  }
+
+  /*Optional: Add some additional styling for price tag*/
+  .price-tag:hover {
+    color: #0072ce;
+  }

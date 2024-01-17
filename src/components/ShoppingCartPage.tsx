@@ -1,13 +1,7 @@
 // ShoppingCartPage.tsx
 
 import React from 'react';
-import { CartItem } from '../types';
-
-
-interface ShoppingCartPageProps {
-  cartItems: CartItem[];
-  removeFromCart: (id: string) => void;
-}
+import { CartItem, ShoppingCartPageProps } from '../types';
 
 const ShoppingCartPage: React.FC<ShoppingCartPageProps> = ({ cartItems, removeFromCart }) => {
 
@@ -19,7 +13,7 @@ const ShoppingCartPage: React.FC<ShoppingCartPageProps> = ({ cartItems, removeFr
     <>
       <h1>Shopping Cart</h1>
       {/* Check if cartItems is not empty before rendering */}
-      <div style={{ display: 'flex' }}>
+      <div>
         {cartItems.length > 0 ? (
           cartItems.map((item) => (
             <div key={item.id} className="cart-item">
@@ -28,7 +22,7 @@ const ShoppingCartPage: React.FC<ShoppingCartPageProps> = ({ cartItems, removeFr
               <div>
                 <h3>{item.name}</h3>
                 <h3>Price: ${item.price}</h3>
-                <button 
+                <button className="remove-from-cart"
                 data-testid={`remove-${item.id}`}
                 onClick={() => handleRemoveClick(item)}>Remove</button>
                 {/* Display other details of the cart item */}

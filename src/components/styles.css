@@ -1,0 +1,141 @@
+/* styles.css */
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px; /* Add spacing between the error message and the shopping cart */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+  margin-bottom: 20px;
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Remove any extra space below the image */
+  margin: 0 auto;
+}
+
+.product-carousel {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Adjust the gap between products */
+}
+
+.product img {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Center the image horizontally */
+}
+
+h2 {
+  color: #555;
+}
+
+.product-details {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* styles.css */
+
+/* Default styles for cart item */
+.cart-item {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+/* Image styles */
+.cart-item img {
+  max-width: 100px; /* Adjust the image size */
+  margin-right: 20px;
+}
+
+/* Text container for details */
+.cart-item .details {
+  flex: 1;
+}
+
+/* Styles for the count */
+.cart-item .count {
+  margin-right: 10px; /* Add space between count and product details */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .cart-item {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .cart-item img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    max-width: 100%; /* Adjust image width for smaller screens */
+  }
+}
+/* styles.css (or your styled component styles) */
+
+/* Styles for the remove button */
+.cart-item button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Additional styles for the cart items */
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.cart-item .details {
+  flex: 1;
+}

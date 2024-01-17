@@ -25,9 +25,9 @@ const Product: React.FC<ProductProps> = ({checkoutId, id, name, price, image1, a
       ) : (
         <img className="product-image" src={image1 || ''} alt={name} />
       )}
-      <h3>{name}</h3>
-      <p>Price: ${price}</p>
-      <button onClick={handleAddToCart}
+      <h3 className="product-title">{name}</h3>
+      <p className="price-tag">Price: ${price}</p>
+      <button className="add-to-cart-button" onClick={handleAddToCart}
       data-testid={`add-to-cart-${id}`}
       >
         <FontAwesomeIcon icon={faShoppingCart} /> Add to Cart

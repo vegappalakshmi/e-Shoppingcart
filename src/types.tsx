@@ -8,6 +8,12 @@ export interface ProductData {
     checkoutId?: string;
     // Add any other necessary properties for a product
   }
+
+  export interface ShoppingCartPageProps{
+    cartItems: CartItem[];
+    removeFromCart: (id: string) => void;
+  }
+  
   export interface CartItem {
     id: string; 
     name: string; 
